@@ -7,6 +7,7 @@ public class Player {
 
 
     public class Konto {
-        
+        int bankkonto1 = 1000;
+        int bankkonto2 = 1000;
     }
 }
