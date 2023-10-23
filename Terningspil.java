@@ -11,11 +11,11 @@ public class Terningspil {
 
 
     public class Spiller2{
-
-
-
-
         
+
+
+
+
     }
 
     public class Dice{
