@@ -1,22 +1,14 @@
 import java.util.Random;
 
 public class Terningspil {
-    public class Spiller1{
-
-
-
-
-    }
-
-
-
-    public class Spiller2{
-        
-
+    public class Spiller{
+        int Bankkonto1 = getSum();
+        int Bankkonto2 = getSum();
 
 
 
     }
+
 
     public class Dice{
         Random rand = new Random();
