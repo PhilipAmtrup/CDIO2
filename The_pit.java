@@ -1,6 +1,22 @@
+import java.util.Random;
+
 public class The_pit {
-    if (total = 11){
-        
+    
+    Random rand = new Random();
+ 
+    int die1 = rand.nextInt(6) + 1;
+ 
+    int die2 = rand.nextInt(6) + 1;
+ 
+    int total = die1 + die2;
+
+    int Turn = 0;
+
+    int bankkonto1 = 1000;
+
+    int bankkonto2 = 1000;
+
+    public void the_pit() {    
 
         if (Turn == 0){
             if (total == 11){
@@ -17,4 +33,5 @@ public class The_pit {
             System.out.println("Din gambling afhængighed slår til igen og du taber 50 penge på en gladiatorkamp. Din saldo er nu: " + bankkonto2);
         }else  Turn = 0;
     }
+
 }

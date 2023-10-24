@@ -1,5 +1,23 @@
+import java.util.Random;
+
 public class The_Werewall {
-    if (total = 9){
+
+    Random rand = new Random();
+ 
+    int die1 = rand.nextInt(6) + 1;
+ 
+    int die2 = rand.nextInt(6) + 1;
+ 
+    int total = die1 + die2;
+
+    int Turn = 0;
+
+    int bankkonto1 = 1000;
+
+    int bankkonto2 = 1000;
+
+        public void the_Werewall(){
+
         
 
         if (Turn == 0){

@@ -1,3 +1,4 @@
+import java.lang.module.ModuleDescriptor.Exports;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -21,10 +22,10 @@ public class Player {
 
 }
 
+
    public class Konto {
     public static void main (String[] args){
 
-    
        int bankkonto1 = 1000;
        int bankkonto2 = 1000;
    }

@@ -1,5 +1,21 @@
+import java.util.Random;
+
 public class Monastery {
-    if (total = 7){
+    Random rand = new Random();
+ 
+    int die1 = rand.nextInt(6) + 1;
+ 
+    int die2 = rand.nextInt(6) + 1;
+ 
+    int total = die1 + die2;
+
+    int Turn = 0;
+
+    int bankkonto1 = 1000;
+
+    int bankkonto2 = 1000;
+
+        public void monastery(){
         
 
         if (Turn == 0){
