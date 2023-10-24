@@ -1,42 +1,29 @@
-import java.util.Random;
-import java.util.Scanner;
-
-
-
 public class terningespil {
     
 
     public static void main(String[] args){
 
-        Scanner scanner = new Scanner(System.in);
-        Random random = new Random();
-
-        System.out.println("Velkommen til terningespillet!");
-
-
-        System.out.print("Indtast spiller 1's navn: ");
-        String player1Name = scanner.nextLine();
-        System.out.print("Indtast spiller 2's navn: ");
-        String player2Name = scanner.nextLine();
+        Player spiller = new Player();
+        Tower felt1 = new Tower();
+        Crater felt2 = new Crater();
+        Palace_gates felt3 = new Palace_gates();
+        Cold_Desert felt4 = new Cold_Desert();
+        Walled_city felt5 = new Walled_city();
+        Monastery felt6 = new Monastery();
+        Black_cave felt7 = new Black_cave();
+        Huts_in_the_mountain felt8 = new Huts_in_the_mountain();
+        The_Werewall felt9 = new The_Werewall();
+        The_pit felt10 = new The_pit();
+        Goldmine felt11 = new Goldmine();
         
-        The_pit a = new The_pit();    
-        a.the_pit();
+        
+        spiller.player(args);
+        felt10.the_pit();
         }
       
    
         
 
-   public class Dice{
-    public void rollDice(){
-       Random rand = new Random();
-
-       int die1 = rand.nextInt(6) + 1;
-
-       int die2 = rand.nextInt(6) + 1;
-
-       int total = die1 + die2;
-
-        }
-    }
+  
 
 } 
