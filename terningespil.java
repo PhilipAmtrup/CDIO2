@@ -19,6 +19,7 @@ public class terningespil {
         
         spiller.player(args);
         felt10.the_pit();
+        felt1.tower();
         }
       
    

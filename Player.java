@@ -50,12 +50,21 @@ scanner.close();
 private static int rollDice(Random random) {
     return random.nextInt(6) + 1;
 }
-public class Konto {
-    public static void main (String[] args){
+public class Konto1 {
+    private int value;
 
-       int bankkonto1 = 1000;
-       int bankkonto2 = 1000;
-   }
+    public int getValue() {
+        return value;
+    }
+
+    public void setValue(int value) {
+        this.value = value;
+    }
+    // public static void main (String[] args){
+
+    //    int bankkonto1 = 1000;
+    //    int bankkonto2 = 1000;
+//    }
 
 }
 }
