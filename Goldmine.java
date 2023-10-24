@@ -5,7 +5,7 @@ public class Goldmine {
 
         if (Turn == 0){
             if (total == 3){
-                bankkonto1 = 650 + bankkonto1;
+                bankkonto1 = bankkonto1 + 650;
             }
             System.out.println("Du finder guld i bjergene og sælger det for 650 penge, Du er rig! Din saldo er nu: " + bankkonto1); 
             
@@ -13,7 +13,7 @@ public class Goldmine {
 
         if (Turn == 1){
             if (total == 3){
-                bankkonto2 = 650 + bankkonto2;
+                bankkonto2 = bankkonto2 + 650;
             }
             System.out.println("Du finder guld i bjergene og sælger det for 650 penge, Du er rig! Din saldo er nu: " + bankkonto2);
         }else  Turn = 0;
