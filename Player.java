@@ -50,12 +50,15 @@ scanner.close();
 private static int rollDice(Random random) {
     return random.nextInt(6) + 1;
 }
-public class Konto {
-    public static void main (String[] args){
+
+}
+class Konto {
+    public void saldo (String[] args){
 
        int bankkonto1 = 1000;
        int bankkonto2 = 1000;
+
+       System.out.println("Din saldo starter på: " + bankkonto1);
    }
 
-}
 }
