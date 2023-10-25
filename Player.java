@@ -53,12 +53,12 @@ private static int rollDice(Random random) {
 
 }
 class Konto {
-    public void saldo (String[] args){
+    public Integer saldo (){
 
        int bankkonto1 = 1000;
        int bankkonto2 = 1000;
 
-       System.out.println("Din saldo starter på: " + bankkonto1);
-   }
+       return bankkonto1;
+    }
 
 }

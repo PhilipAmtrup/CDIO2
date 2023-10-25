@@ -11,15 +11,36 @@ public class spil {
         
         Player spiller = new Player();
         Konto konto = new Konto();
+        Dice terning = new Dice();
         
-        spiller.player(args);
-        konto.saldo(args);
+        // i forhold til at kunne få spiller til at fungere så skal vi ændre "void" til måske en string
+        // og så indsætte return statements ligesom de andre med konto og dice
 
-        // loop med if - else osv.
-        
+        if(terning.dice() == 7){
+            System.out.println(konto.saldo());
+        } else {
+            System.out.println("det var ikke en 7'er");
+        }
+
+         
         
 
     }
     
 }
 
+class Dice {
+    public Integer dice(){
+        
+        Random rand = new Random();
+
+        int die1 = rand.nextInt(6) + 1;
+
+        int die2 = rand.nextInt(6) + 1;
+
+        int total = die1 + die2;
+
+        return total;
+        
+        }
+}
