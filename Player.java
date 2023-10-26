@@ -4,10 +4,12 @@ import java.util.Scanner;
 
 // Spillernes score, tur og navn bliver sat i spil her
 public class Player {
-    public void player(String[] args){
+    public Void player(String[] args){
    
 
    Integer Turn = 0;
+   Integer player1win = 0;
+     Integer player2win = 0;
 
    Scanner scanner = new Scanner(System.in);
    Random random = new Random();
@@ -20,25 +22,37 @@ public class Player {
    System.out.print("Indtast spiller 2's navn: ");
    String player2Name = scanner.nextLine();
 
-   if (Turn == 0) {
-    System.out.println(player1Name + "'s tur. Tryk Enter for at rulle med terningerne.");
-    scanner.nextLine();
-    int die1 = rollDice(random);
-    int die2 = rollDice(random);
-    int sum1 = die1 + die2;
-    System.out.println(player1Name + " rullede: " + die1 + " og " + die2 + " I alt: " + sum1);
 
-   }else Turn = 1;{
-        System.out.println(player2Name + "'s tur. Tryk Enter for at rulle med terningerne.");
-        scanner.nextLine();
-        int dice3 = rollDice(random);
-        int dice4 = rollDice(random);
-        int sum2 = dice3 + dice4;
 
-        System.out.println(player2Name + " rullede: " + dice3 + " og " + dice4 + " I alt: " + sum2);
+   while(player1win < 1 && player2win < 1){
+    
+        if (Turn == 0) {
+            System.out.println(player1Name + "'s tur. Tryk Enter for at rulle med terningerne.");
+            scanner.nextLine();
+            int die1 = rollDice(random);
+            int die2 = rollDice(random);
+            int sum1 = die1 + die2;
+            scanner.close();
+            System.out.println(player1Name + " rullede: " + die1 + " og " + die2 + " I alt: " + sum1);
 
-}
-scanner.close();
+        }else Turn = 1;{
+                System.out.println(player2Name + "'s tur. Tryk Enter for at rulle med terningerne.");
+                scanner.nextLine();
+                int dice3 = rollDice(random);
+                int dice4 = rollDice(random);
+                int sum2 = dice3 + dice4;
+                
+                
+                scanner.close();
+            
+                System.out.println(player2Name + " rullede: " + dice3 + " og " + dice4 + " I alt: " + sum2);
+
+        }
+            
+            }
+return null;
+   
+
 
     
        
