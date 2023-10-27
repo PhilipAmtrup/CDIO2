@@ -15,7 +15,6 @@ public class Game {
 
     public void spil(){
 
-        Scanner scanner = new Scanner(System.in);
 
         System.out.println("Velkommen til terningespillet!");
 
@@ -32,10 +31,12 @@ public class Game {
         
 
         while (score[0] < win && score[1] < win){
-            System.out.println(player1Name + "'s pengebeholdning er: " + score[0] + " og " + player2Name + "'s pengebeholdning er: " + score[1]);
-            scanner.nextLine();
-            System.out.println(player1Name + "'s tur. Tryk Enter for at rulle med terningerne.");
-            scanner.nextLine();
+           
+           
+           
+           
+           
+            
             
             int diceSum = dice();
             int diceSum2 = dice();
@@ -45,9 +46,29 @@ public class Game {
             int scoreændring = values[diceSum - 2];
             int scoreændring2 = values[diceSum2 - 2];
 
-            // Den skiftes med at give spillerne score, så første runde får spiller 1 den værdi han lander på, men i anden runde får spiller 1 den værdi spiller 2 lander på
+                if(score[0] <= 0){
+                System.out.println(player1Name + " din pengebeholdning er på " + score[0] + " og du har ikke flere penge tilbage og må desværre udgå spillet... Tillykke med sejren " + player2Name);
+                break;
+                                
+                                
+                            } else if (score[1] <= 0){
+                                System.out.println(player2Name + " din pengebeholdning er på " + score[1] + " og du har ikke flere penge tilbage og må desværre udgå spillet... Tillykke med sejren " + player1Name);
+                                break;
+                                
+                            } 
+            System.out.println(player1Name + "'s pengebeholdning er: " + score[0] + " og " + player2Name + "'s pengebeholdning er: " + score[1]);
+            scanner.nextLine();
+            System.out.println(player1Name + "'s tur. Tryk Enter for at rulle med terningerne.");
+            scanner.nextLine();
+            
+
             System.out.println(player1Name + " du rullede " + diceSum + " og har landet på " + felter);
             score[turn[0]] += scoreændring;
+
+            
+
+            
+            
             
             scanner.nextLine();
 
@@ -60,31 +81,25 @@ public class Game {
 
             scanner.nextLine();
 
-            
 
-            
-            // giver ikke ekstra tur...
-            if (turn[0] == 0 && diceSum == 10){
-                System.out.println(player1Name + "Du får en ekstra tur!");
+            while (diceSum == 10){
                 turn[0] = 0;
-            } else if (turn[1] == 1 && diceSum == 10){
-                System.out.println(player2Name + "Du får en ekstra tur!");
-                turn[1] = 1;
+            } if (diceSum2 == 10){
+                turn[1] = turn[1];
+            } else {
+                continue;
             }
 
-            // har lige fjernet dem her fordi det med scoren virker når de ikke er sat ind, vil bare ikke slette det før i ved mere
-            // turn[0] = (turn[0] + 1) % 2;
-            // turn[1] = (turn[1] + 1) % 2;
-            }
+        }
             
             
         
-       if (score[0] >= win){
+       if (score[0] >= win && score[0] > 0){
         System.out.println(player1Name + "'s pengebeholdning er: " + score[0] + " og " + player2Name + "'s pengebeholdning er: " + score[1]);
         scanner.nextLine();
         System.out.println("Tillykke  " + player1Name + " Du har vundet spillet!!!");
 
-       } else if (score[1] >= win){
+       } else if (score[1] >= win && score[1] > 0){
         System.out.println(player1Name + "'s pengebeholdning er: " + score[0] + " og " + player2Name + "'s pengebeholdning er: " + score[1]);
         scanner.nextLine();
         System.out.println("Tillykke " + player2Name + "! Du har vundet spillet!!!");
@@ -99,19 +114,19 @@ public class Game {
         
     
   
-    public Integer dice(){
-        
-        Random rand = new Random();
+        public Integer dice(){
+            
+            Random rand = new Random();
 
-        int die1 = rand.nextInt(6) + 1;
+            int die1 = rand.nextInt(6) + 1;
 
-        int die2 = rand.nextInt(6) + 1;
+            int die2 = rand.nextInt(6) + 1;
 
-        int total = die1 + die2;
+            int total = die1 + die2;
 
-        return total;
-        
-        }
+            return total;
+            
+            }
     }
 
 
