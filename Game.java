@@ -16,7 +16,7 @@ public class Game {
     public void spil(){
 
 
-        System.out.println("Velkommen til det virtuelle brætspil!");
+        System.out.println("Velkommen til det virtuelle terningespil!");
 
 
         System.out.print("Indtast spiller 1's navn: ");
